@@ -1,0 +1,502 @@
+# 此檔由管理後台（admin.html）產生與維護
+site:
+  draft_banner: true
+  github:
+    user: TripleC1121
+    repo: TripleC1121.github.io
+    branch: main
+profile:
+  name:
+    zh: 張家誌
+    en: George Chang
+  headline:
+    zh: 材料與製程開發工程師｜工程模擬｜機器人系統整合
+    en: Materials & Process Development Engineer | Engineering Simulation | Robotics Integration
+  location:
+    zh: 台北，台灣
+    en: Taipei, Taiwan
+  email: georgechang1121@gmail.com
+  photo: ''
+  cv_pdf:
+    zh: ''
+    en: ''
+  summary:
+    zh: 台灣大學醫學工程碩士、大同大學機械與材料工程學士。專長為塗層製程開發、材料分析與多物理模擬，並有 ROS 機器人開發經驗。目標是成為能在國際團隊中貢獻的跨領域工程師。
+    en: M.S. in Biomedical Engineering (National Taiwan University) and B.S. in Mechanical and Materials Engineering. I work on coating process development, materials characterization, and multiphysics
+      simulation, with additional experience in ROS robotics. My goal is to contribute as a cross-disciplinary engineer in international teams.
+  links:
+  - label: LinkedIn
+    url: ''
+experience:
+- org:
+    zh: 工業技術研究院（ITRI）
+    en: Industrial Technology Research Institute (ITRI)
+  role:
+    zh: 生醫與醫材研究所 研發實習生
+    en: R&D Intern, Biomedical Technology and Device Research Laboratories
+  period: 2025/09 – 待補
+  place:
+    zh: 新竹
+    en: Hsinchu
+  points:
+    zh:
+    - 參與骨科植入物壓電塗層的製程開發與整合。
+    - 以 ANSYS 與 COMSOL 進行壓電–結構耦合模擬，支援微型超音波裝置的設計。
+    en:
+    - Contributed to process development and integration of piezoelectric coatings for orthopedic implants.
+    - Ran coupled piezoelectric–structural simulations in ANSYS and COMSOL to support the design of a miniature ultrasonic device.
+- org:
+    zh: Amazon Web Services（AWS）
+    en: Amazon Web Services (AWS)
+  role:
+    zh: 第六屆 AWS Educate 雲端大使 技術組
+    en: AWS Educate Cloud Ambassador, Tech Team (6th Cohort)
+  period: 2024/03 – 2024/11
+  place:
+    zh: 台北
+    en: Taipei
+  points:
+    zh:
+    - 設計並主講 5 場以上雲端實作工作坊，觸及 500 位以上學生。
+    en:
+    - Designed and delivered 5+ hands-on cloud workshops reaching 500+ students.
+- org:
+    zh: 中華汽車（CMC）
+    en: China Motor Corporation (CMC)
+  role:
+    zh: 前瞻技術室 實習生
+    en: Intern, Advanced Technology Office
+  period: 2022/07 – 2022/09
+  place:
+    zh: 桃園
+    en: Taoyuan
+  points:
+    zh:
+    - 以 Python 分析車載 IoT 電動車電池數據，提出以內阻推估電池健康度（SOH）的方法。
+    en:
+    - Analyzed electric-vehicle battery data from in-vehicle IoT devices with Python and proposed an internal-resistance-based state-of-health (SOH) approach.
+education:
+- org:
+    zh: 國立臺灣大學
+    en: National Taiwan University
+  role:
+    zh: 醫學工程學系 碩士
+    en: M.S. in Biomedical Engineering
+  period: 2024/09 – 2026/07
+  place:
+    zh: 台北
+    en: Taipei
+  points:
+    zh:
+    - 碩士論文：促進骨癒合之水熱合成壓電 BaTiO3 塗層技術開發
+    en:
+    - 'Thesis: Development of Hydrothermal Piezoelectric BaTiO3 Coating Technology for Promoting Bone Healing'
+- org:
+    zh: 大同大學
+    en: Tatung University
+  role:
+    zh: 機械與材料工程學系 學士
+    en: B.S. in Mechanical and Materials Engineering
+  period: 2020/09 – 2024/06
+  place:
+    zh: 台北
+    en: Taipei
+skills:
+- group:
+    zh: 製程
+    en: Process
+  items:
+    zh: 水熱合成、靜電紡絲、真空退火、電暈與接觸式極化、塗層製程整合
+    en: Hydrothermal synthesis, electrospinning, vacuum annealing, corona and contact poling, coating process integration
+- group:
+    zh: 材料分析
+    en: Characterization
+  items:
+    zh: SEM/EDX、XRD、Raman、FTIR、AFM、d33 量測、接觸角、動電位極化、EIS、拉伸試驗
+    en: SEM/EDX, XRD, Raman, FTIR, AFM, d33 meter, contact angle, potentiodynamic polarization, EIS, tensile test
+- group:
+    zh: 模擬與繪圖
+    en: Simulation & CAD
+  items: COMSOL Multiphysics, ANSYS, SolidWorks, AutoCAD
+- group:
+    zh: 軟體與機器人
+    en: Software & Robotics
+  items: Python, ROS, Linux, C++, AWS
+publications:
+  zh:
+  - C.-C. Chang 等，Development and Application of Piezoelectric Films for Enhancing Bone Growth，ORS 2026 Annual Meeting（摘要已接受）
+  - C.-C. Chang 等，The Effect of Plasma Nitriding on the Anti-Corrosion Properties of W-DLC Films Deposited on 316L Steel，ICETAT 2024
+  en:
+  - C.-C. Chang et al., Development and Application of Piezoelectric Films for Enhancing Bone Growth, ORS 2026 Annual Meeting (accepted abstract)
+  - C.-C. Chang et al., The Effect of Plasma Nitriding on the Anti-Corrosion Properties of W-DLC Films Deposited on 316L Steel, ICETAT 2024
+projects:
+- slug: batio3-coating
+  title:
+    zh: 水熱合成壓電 BaTiO3 塗層
+    en: Hydrothermal Piezoelectric BaTiO3 Coating
+  period: 2024 – 2026
+  role:
+    zh: 碩士論文
+    en: Master's thesis
+  tags:
+  - Materials
+  - Process
+  featured: true
+  cover: ''
+  summary:
+    zh: 在 Ti-6Al-4V 骨科植入物表面原位成長壓電 BaTiO3 塗層，並建立製程、微結構與壓電性能的關聯。
+    en: In-situ growth of a piezoelectric BaTiO3 coating on Ti-6Al-4V orthopedic implants, linking process, microstructure, and piezoelectric response.
+  cv_points:
+    zh:
+    - 以陽極處理、水熱合成、真空退火與電暈極化，原位成長約 1 µm 的 BaTiO3 塗層。
+    - 600 °C 退火使局部 d33 由 66.95 提升至 98.65 pm/V；800 °C 以上出現基材氧化與塗層剝落。
+    en:
+    - Grew an approximately 1 µm BaTiO3 coating in situ through anodization, hydrothermal synthesis, vacuum annealing, and corona poling.
+    - Annealing at 600 °C raised local d33 from 66.95 to 98.65 pm/V; substrate oxidation and delamination appeared at 800 °C and above.
+  blocks:
+  - t: h
+    zh: 研究背景
+    en: Background
+  - t: p
+    zh: 骨頭本身具有壓電特性，受力時會產生電訊號並促進骨修復。這個研究想讓金屬植入物表面也具備同樣的能力。常見的 BaTiO3 鍍膜方法需要 800 °C 以上的高溫，但 Ti-6Al-4V 在高溫下會氧化，導致塗層剝落。
+    en: 'Bone is piezoelectric: mechanical loading produces electrical signals that promote repair. This work aims to give metal implants the same ability. Common BaTiO3 coating methods need temperatures
+      above 800 °C, but Ti-6Al-4V oxidizes at high temperature and the coating delaminates.'
+  - t: h
+    zh: 研究方法
+    en: Approach
+  - t: p
+    zh: '- 建立四站整合製程：陽極處理形成 TiO2 前驅層 → 180 °C 水熱合成 → Ar–4%H2 真空退火 → 電暈極化
+
+      - 比較 3 種前驅層厚度、不同 Ba(OH)2 與 KOH 濃度、4 個退火溫度（400–1000 °C）與 2 種極化方式
+
+      - 以 SEM/EDX、XRD、Raman 分析形貌、成分與晶相，以 PFM 量測局部壓電響應
+
+      - 自行架設電暈極化設備'
+    en: '- Built a four-step process: anodization to form a TiO2 precursor layer → hydrothermal synthesis at 180 °C → vacuum annealing in Ar–4%H2 → corona poling
+
+      - Compared 3 precursor thicknesses, Ba(OH)2 and KOH concentrations, 4 annealing temperatures (400–1000 °C), and 2 poling modes
+
+      - Characterized morphology, composition, and phase with SEM/EDX, XRD, and Raman; local piezoelectric response measured by PFM
+
+      - Built the corona-poling setup'
+  - t: h
+    zh: 研究成果
+    en: Results
+  - t: p
+    zh: '- 最佳條件：0.5 M Ba(OH)2 + 1.5 M KOH 水熱反應，搭配 600 °C 退火
+
+      - 局部 d33 由 66.95 提升至 98.65 pm/V
+
+      - 800 °C 以上退火會造成基材氧化與塗層剝落
+
+      - 本研究採用的極化條件未能進一步提升壓電響應，是後續要優化的方向'
+    en: '- Best condition: 0.5 M Ba(OH)2 + 1.5 M KOH hydrothermal reaction with annealing at 600 °C
+
+      - Local d33 increased from 66.95 to 98.65 pm/V
+
+      - Annealing at 800 °C and above caused substrate oxidation and coating delamination
+
+      - The poling conditions used did not further improve the response; this is the next thing to optimize'
+  - t: h
+    zh: 討論
+    en: Discussion
+  - t: p
+    zh: 薄膜的晶相判讀不能只靠單一儀器：XRD 沒有看到四方相的峰分裂，但 Raman 清楚顯示四方相特徵，需要交叉驗證。
+    en: 'Phase identification in thin coatings should not rely on one instrument: XRD showed no tetragonal peak splitting, while Raman clearly showed tetragonal features. Cross-validation was necessary.'
+- slug: pvdf-nanofiber
+  title:
+    zh: 壓電 PVDF 奈米纖維膜促進骨生長
+    en: Piezoelectric PVDF Nanofiber Films for Bone Growth
+  period: 2024 – 2026
+  role:
+    zh: ORS 2026 第一作者
+    en: First author, ORS 2026
+  tags:
+  - Materials
+  - Biomedical
+  featured: true
+  cover: ''
+  summary:
+    zh: 以靜電紡絲製備壓電奈米纖維膜作為骨科植入物塗層，並以細胞與動物實驗評估成效。
+    en: Electrospun piezoelectric nanofiber films as an orthopedic implant coating, evaluated in cell and animal studies.
+  cv_points:
+    zh:
+    - 以靜電紡絲、退火與極化製備 PVDF/BaTiO3 薄膜：β 相 43–48%、d33 為 56–60 pC/N。
+    - 體外鈣沉積提升 1.5–2 倍；體內破壞載重 150 對 120 N（p = 0.045）。
+    en:
+    - 'Fabricated PVDF/BaTiO3 films by electrospinning, annealing, and poling: β-phase 43–48%, d33 56–60 pC/N.'
+    - In vitro calcium deposition up 1.5–2×; in vivo failure load 150 vs. 120 N (p = 0.045).
+  blocks:
+  - t: h
+    zh: 研究背景
+    en: Background
+  - t: p
+    zh: 傳統骨科植入物常遇到癒合延遲的問題。壓電材料能在受力時產生微小電訊號，模擬骨組織的電機械特性。
+    en: Conventional orthopedic implants can suffer from delayed healing. Piezoelectric materials generate small electrical signals under load, mimicking the electromechanical behavior of bone.
+  - t: h
+    zh: 研究方法
+    en: Approach
+  - t: p
+    zh: '- 以靜電紡絲、退火與極化製備 PVDF 奈米纖維膜，並加入 20 wt% BaTiO3 奈米顆粒提升壓電性
+
+      - 量測纖維形貌、β 相比例（FTIR）、孔隙率、拉伸強度、接觸角與 d33
+
+      - 以 MC3T3-E1 前驅成骨細胞進行體外實驗，並在大鼠股骨缺損模型中評估（與骨科醫師合作）'
+    en: '- Fabricated PVDF nanofiber films by electrospinning, annealing, and poling, with 20 wt% BaTiO3 nanoparticles added to raise piezoelectricity
+
+      - Measured fiber morphology, β-phase fraction (FTIR), porosity, tensile strength, contact angle, and d33
+
+      - Ran in vitro tests with MC3T3-E1 preosteoblasts and an in vivo rat femoral defect study (with orthopedic surgeons)'
+  - t: h
+    zh: 研究成果
+    en: Results
+  - t: p
+    zh: '- 纖維直徑 90–200 nm，β 相比例 43–48%，d33 為 56–60 pC/N，拉伸強度約 25 MPa
+
+      - 體外：21 天鈣沉積提升 1.5–2 倍
+
+      - 體內：60 天後三點彎曲最大破壞載重，PVDF 塗層組 150 ± 20 N，未塗層對照組 120 ± 15 N（p = 0.045）'
+    en: '- Fiber diameter 90–200 nm, β-phase 43–48%, d33 56–60 pC/N, tensile strength about 25 MPa
+
+      - In vitro: 1.5–2× calcium deposition at 21 days
+
+      - In vivo: maximum failure load at 60 days was 150 ± 20 N for PVDF-coated pins versus 120 ± 15 N for uncoated controls (p = 0.045)'
+  - t: h
+    zh: 研究限制
+    en: Limitations
+  - t: p
+    zh: 動物實驗樣本數少，仍需更大規模的驗證。成果已被 ORS 2026 年會接受。
+    en: The animal sample size was small and larger studies are needed. Accepted at the ORS 2026 Annual Meeting.
+- slug: ultrasonic-platform
+  title:
+    zh: 微型超音波手術平台（SONYVA）
+    en: Miniature Ultrasonic Surgical Platform (SONYVA)
+  period: 2024 – 2026
+  role:
+    zh: 學生團隊主要成員，NTU SPARK 計畫
+    en: Key member, student team, NTU SPARK program
+  tags:
+  - Simulation
+  - Biomedical
+  featured: true
+  cover: ''
+  summary:
+    zh: 與臨床醫師合作開發的微創軟組織切割研究原型，目前為臨床前階段，尚未取得任何法規核准。
+    en: A research prototype for minimally invasive soft-tissue cutting, developed with clinicians. Preclinical stage; not cleared or approved by any regulatory agency.
+  cv_points:
+    zh:
+    - 參與模擬導向設計、原型製作、量測與離體組織切割實驗。
+    en:
+    - Contributed to simulation-driven design, prototyping, measurement, and ex vivo tissue-cutting tests.
+  blocks:
+  - t: callout
+    zh: 本頁內容待本人審核後才公開。此專案為臨床前研究原型，尚未取得任何法規核准，也未經臨床驗證。
+    en: This page is pending review before publication. The project is a preclinical research prototype. It is not cleared or approved by any regulatory agency and has not been clinically validated.
+  - t: h
+    zh: 專案概述
+    en: Overview
+  - t: p
+    zh: SONYVA 是學生團隊，與台大醫院耳鼻喉科及眼科醫師合作，開發用於微創軟組織切割的微型超音波手術平台。
+    en: SONYVA is a student team working with otolaryngologists and ophthalmologists at NTU Hospital on a miniature ultrasonic surgical platform for minimally invasive soft-tissue cutting.
+  - t: h
+    zh: 產品特色
+    en: Features
+  - t: p
+    zh: 待補：由本人提供可公開的特色與功能說明。
+    en: 'To be added: publicly shareable features and functions.'
+  - t: h
+    zh: 負責項目
+    en: Responsibilities
+  - t: p
+    zh: '- 工程模擬與設計評估
+
+      - 原型製作與量測
+
+      - 離體組織切割實驗'
+    en: '- Engineering simulation and design evaluation
+
+      - Prototyping and measurement
+
+      - Ex vivo tissue-cutting tests'
+  - t: h
+    zh: 影片與照片
+    en: Media
+  - t: p
+    zh: 待補：由本人提供可公開的影片與照片。
+    en: To be added.
+- slug: wdlc-corrosion
+  title:
+    zh: W-DLC 薄膜之腐蝕行為
+    en: Corrosion Behavior of W-DLC Films
+  period: 2022 – 2024
+  role:
+    zh: ICETAT 2024 第一作者
+    en: First author, ICETAT 2024
+  tags:
+  - Materials
+  cover: ''
+  summary:
+    zh: 以電化學方法評估電漿氮化中間層對 316L 不鏽鋼上 W-DLC 薄膜抗腐蝕性的影響。
+    en: Electrochemical evaluation of how a plasma-nitrided interlayer affects the corrosion resistance of W-DLC films on 316L steel.
+  cv_points:
+    zh:
+    - 以動電位極化、EIS 與 Raman 評估薄膜（鍍膜由金屬中心執行），證實氮化中間層降低抗腐蝕性。
+    en:
+    - Tested films by potentiodynamic polarization, EIS, and Raman (deposition by MIRDC); showed the nitrided interlayer lowered corrosion resistance.
+  blocks:
+  - t: h
+    zh: 研究問題
+    en: Research Question
+  - t: p
+    zh: 在 316L 不鏽鋼上鍍鎢摻雜類鑽碳（W-DLC）薄膜之前，先做電漿氮化，能不能提升抗腐蝕性？
+    en: Does plasma nitriding 316L stainless steel before depositing a tungsten-doped diamond-like carbon (W-DLC) film improve corrosion resistance?
+  - t: h
+    zh: 研究方法
+    en: Approach
+  - t: p
+    zh: '- 設計比較組別：有無氮化中間層的 W-DLC 薄膜（鍍膜與氮化由金屬工業研究發展中心執行）
+
+      - 以動電位極化與電化學阻抗譜（EIS）評估抗腐蝕性
+
+      - 以 Raman（ID/IG）與接觸角分析薄膜結構與表面性質'
+    en: '- Designed the comparison: W-DLC films with and without a nitrided interlayer (deposition and nitriding by the Metal Industries Research & Development Centre)
+
+      - Evaluated corrosion resistance by potentiodynamic polarization and electrochemical impedance spectroscopy (EIS)
+
+      - Analyzed film structure and surface properties by Raman (ID/IG) and contact angle'
+  - t: h
+    zh: 研究成果
+    en: Results
+  - t: p
+    zh: 氮化中間層沒有提升抗腐蝕性，反而使腐蝕電位降低、電流密度升高、阻抗下降。推論原因是氮化後表面多孔，使薄膜附著性變差。
+    en: The nitrided interlayer did not help. It lowered the corrosion potential, raised the current density, and reduced impedance, likely because the porous nitrided surface weakened film adhesion.
+  - t: h
+    zh: 發表
+    en: Publications
+  - t: p
+    zh: 2023 CTTT 與 2024 ICETAT 研討會發表，並獲國科會大專學生研究計畫補助。
+    en: CTTT 2023 and ICETAT 2024; supported by an NSTC College Student Research Scholarship.
+- slug: ros-service-robot
+  title:
+    zh: ROS 智能服務型機器人
+    en: Intelligent Service Robot with ROS
+  period: 2022 – 2023
+  role:
+    zh: 大學專題
+    en: Undergraduate project
+  tags:
+  - Robotics
+  cover: ''
+  summary:
+    zh: 在 NVIDIA Jetson TX2 上整合 ROS 與 YOLOv3，實現建圖、導航、避障與物件偵測。
+    en: ROS and YOLOv3 on NVIDIA Jetson TX2 for mapping, navigation, obstacle avoidance, and object detection.
+  cv_points:
+    zh:
+    - 以 ROS 開發移動機器人：2D SLAM、3D 建圖、自主導航、避障與物件偵測。
+    en:
+    - 'Built a mobile robot with ROS: 2D SLAM, 3D mapping, autonomous navigation, obstacle avoidance, and object detection.'
+  blocks:
+  - t: h
+    zh: 專案概述
+    en: Overview
+  - t: p
+    zh: 以 NVIDIA Jetson TX2 為運算核心，在 Ubuntu Linux 上用 ROS 整合感測器與深度學習模型，開發可自主移動的服務型機器人。
+    en: A mobile service robot built on NVIDIA Jetson TX2, integrating sensors and a deep-learning model with ROS on Ubuntu Linux.
+  - t: h
+    zh: 系統功能
+    en: System Capabilities
+  - t: p
+    zh: '- 無線遠端控制（SSH）
+
+      - 2D SLAM 建圖與定位
+
+      - 3D 點雲建圖
+
+      - 自主導航，含靜態與動態避障
+
+      - YOLOv3 物件偵測'
+    en: '- Wireless remote control (SSH)
+
+      - 2D SLAM mapping and localization
+
+      - 3D point-cloud mapping
+
+      - Autonomous navigation with static and dynamic obstacle avoidance
+
+      - YOLOv3 object detection'
+  - t: h
+    zh: 負責項目
+    en: Responsibilities
+  - t: p
+    zh: 系統整合：感測器設定、ROS 節點串接、導航參數調整與實機測試。
+    en: 'System integration: sensor setup, ROS node integration, navigation tuning, and on-robot testing.'
+- slug: cccrobot
+  title:
+    zh: CCCRobot 機器人產業情報
+    en: CCCRobot Robotics Industry Intelligence
+  period: 待補 – 至今
+  role:
+    zh: 個人專案
+    en: Personal project
+  tags:
+  - Robotics
+  - Software
+  in_cv: false
+  cover: ''
+  summary:
+    zh: 中英雙語機器人產業動態帳號，以及自建的機器人公司情報網站。
+    en: Bilingual robotics-industry news accounts and a self-built robotics company intelligence web app.
+  blocks:
+  - t: h
+    zh: 專案概述
+    en: Overview
+  - t: p
+    zh: 為了持續追蹤機器人產業，我經營中英雙語的機器人產業動態帳號，並自建一個機器人公司情報網站。
+    en: To keep track of the robotics industry, I run bilingual robotics-industry news accounts and built a robotics company intelligence web app.
+  - t: h
+    zh: 專案範圍
+    en: Scope
+  - t: p
+    zh: '- 每日依第一手來源發布中英文產業動態
+
+      - 情報網站部署於 Cloudflare Workers，使用 D1 資料庫並設有登入權限控管'
+    en: '- Daily posts in Traditional Chinese and English based on primary sources
+
+      - A web app deployed on Cloudflare Workers with a D1 database and access control'
+  - t: h
+    zh: 待補
+    en: To Be Added
+  - t: p
+    zh: 起始時間、帳號連結、成果數據。
+    en: Start date, account links, and results.
+awards:
+- title:
+    zh: 國科會大專學生研究計畫
+    en: NSTC College Student Research Scholarship
+  org:
+    zh: 國家科學及技術委員會
+    en: National Science and Technology Council
+  date: '2023'
+  note:
+    zh: 計畫編號 112-2813-C-036-019-E
+    en: Grant No. 112-2813-C-036-019-E
+- title:
+    zh: 磨潤科技實務競賽 獲獎（待補：獎項名稱）
+    en: 'Tribology practical competition award (TBD: award name)'
+  org:
+    zh: 待補
+    en: TBD
+  date: 2023 / 2024
+  note:
+    zh: ''
+    en: ''
+- title:
+    zh: 淨零碳規劃管理師
+    en: Net-Zero Carbon Planning Administrator
+  org:
+    zh: 經濟部產業發展署
+    en: Industrial Development Administration, MOEA
+  date: 2024/06
+  note:
+    zh: 證照
+    en: Certification

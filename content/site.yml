@@ -34,18 +34,18 @@ experience:
       zh: 工業技術研究院（ITRI）
       en: Industrial Technology Research Institute (ITRI)
     role:
-      zh: 生醫與醫材研究所 研發實習生
-      en: R&D Intern, Biomedical Technology and Device Research Laboratories
+      zh: 生醫與醫材研究所 生醫晶片部 實習生
+      en: Deportment of Bio-Chips Intern, Biomedical Technology and Device Research Laboratories
     period: 2025/09 – 2026/07
     place:
       zh: 新竹
       en: Hsinchu
     points:
       zh:
-        - 骨科植入物壓電塗層的製程開發與整合。
-        - 以 ANSYS 與 COMSOL 進行壓電–結構耦合模擬，支援微型超音波裝置的設計。
+        - 骨科植入物壓電塗層製程開發與整合
+        - 以 ANSYS 與 COMSOL 進行壓電–結構耦合模擬，支援微型超音波裝置的設計
       en:
-        - Contributed to process development and integration of piezoelectric coatings for orthopedic implants.
+        - The Development and Integration of piezoelectric coatings for orthopedic implants
         - Ran coupled piezoelectric–structural simulations in ANSYS and COMSOL to support the design of a miniature ultrasonic device.
   - org:
       zh: Amazon Web Services（AWS）
@@ -91,10 +91,12 @@ education:
     points:
       zh:
         - 碩士論文：促進骨癒合之水熱合成壓電 BaTiO3 塗層技術開發
-        - 開發專案：壓電骨癒合骨科植入物、SONYVA微型超音波手術系統
+        - 開發專案Ⅰ：壓電骨癒合骨科植入物設計與開發 (NTU Spark, ITRI)
+        - 開發專案Ⅱ：SONYVA微型超音波手術系統設計與開發 (NTU Spark)
       en:
-        - 'Thesis: Development of Hydrothermal Piezoelectric BaTiO3 Coating Technology for Promoting Bone Healing'
-        - 'Development projects: Piezoelectric bone healing orthopedic implants, SONYVA miniature ultrasound surgical system'
+        - Thesis：Development of Hydrothermal Piezoelectric BaTiO3 Coating Technology for Promoting Bone Healing
+        - Development Project Ⅰ：The Design and the Development of Piezoelectric bone healing orthopedic implants (NTU Spark, ITRI)
+        - Development Project Ⅱ： The Design and the Development of SONYVA miniature ultrasound surgical system (NTU Spark)
   - org:
       zh: 大同大學
       en: Tatung University
@@ -106,8 +108,12 @@ education:
       zh: 台北
       en: Taipei
     points:
-      zh: []
-      en: []
+      zh:
+        - 學士研究：電漿氮化對沉積於 316L 不鏽鋼的 W-DLC 薄膜抗腐蝕性質的影響 (NSTC 大專生研究計畫)
+        - 開發專案：整合機器人開源平台ROS及深度學習網路YOLOv3 研發智能服務型機器人 (NSTC)
+      en:
+        - Thesis：The Effect of Plasma Nitriding on the Anti-Corrosion Properties of W-DLC Films Deposited on 316L Steel (NSTC College Student Research Scholarship)
+        - Development Project ：Integrating ROS Deep Learning Network YOLOv3 to develop intelligent service robots (NSTC)
 skills:
   - group:
       zh: 製程
@@ -124,11 +130,15 @@ skills:
   - group:
       zh: 模擬與繪圖
       en: Simulation & CAD
-    items: COMSOL Multiphysics, ANSYS, SolidWorks, AutoCAD
+    items:
+      zh: COMSOL Multiphysics, ANSYS, SolidWorks, AutoCAD
+      en: COMSOL Multiphysics, ANSYS, SolidWorks, AutoCAD
   - group:
       zh: 軟體與機器人
       en: Software & Robotics
-    items: Python, ROS, Linux, C++, AWS
+    items:
+      zh: Python, ROS, Linux, C++, AWS
+      en: Python, ROS, Linux, C++, AWS
 publications:
   zh:
     - C.-C. Chang 等，Development and Application of Piezoelectric Films for Enhancing Bone Growth，ORS 2026 Annual Meeting（摘要已接受）

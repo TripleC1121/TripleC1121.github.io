@@ -10,13 +10,13 @@ profile:
     zh: 張家誌
     en: George Chang
   headline:
-    zh: 材料與製程開發工程師｜工程模擬｜機器人系統整合
-    en: Materials & Process Development Engineer | Engineering Simulation | Robotics Integration
+    zh: 材料與製程開發工程｜工程模擬｜機器人系統整合
+    en: Materials & Process Development Engineering | Engineering Simulation | Robotics Integration
   location:
     zh: 台北，台灣
     en: Taipei, Taiwan
   email: georgechang1121@gmail.com
-  photo: ''
+  photo: assets/photo.png
   cv_pdf:
     zh: ''
     en: ''
@@ -102,6 +102,9 @@ education:
     place:
       zh: 台北
       en: Taipei
+    points:
+      zh: []
+      en: []
 skills:
   - group:
       zh: 製程
@@ -484,3 +487,4 @@ awards:
     note:
       zh: 證照
       en: Certification
+labels: {}

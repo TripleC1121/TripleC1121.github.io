@@ -10,8 +10,8 @@ profile:
     zh: 張家誌
     en: George Chang
   headline:
-    zh: 材料與製程開發工程｜工程模擬｜機器人系統整合 | 薄膜鍍膜技術
-    en: Materials & Process Development Engineering | Engineering Simulation | Robotics Integration| Thin Films Coating Technology
+    zh: 材料與製程開發工程｜工程模擬｜機器人系統整合 | 薄膜與鍍膜技術
+    en: Materials & Process Development Engineering | Engineering Simulation | Robotics Integration| Thin Films & Coating Technology
   location:
     zh: 台北，台灣
     en: Taipei, Taiwan
@@ -21,11 +21,11 @@ profile:
     zh: ''
     en: ''
   summary:
-    zh: 台灣大學醫學工程碩士，大同大學機械與材料工程學士。專長為塗層與相變材料製程設計開發、材料機械性質分析與多物理模擬，並具備 ROS 機器人、電動車電池數據分析、AWS雲端平台開發經驗。旨在成為具備跨領域能力的國際工程師。
+    zh: 台灣大學醫學工程碩士，大同大學機械與材料工程學士。專長為塗層與相變材料製程設計開發、材料機械性質分析與多物理工程模擬，並具備 ROS 機器人、電動車電池數據分析、AWS雲端平台開發經驗。旨在成為具備跨領域能力的國際工程師。
     en: >-
-      M.S. in Biomedical Engineering from National Taiwan University and B.S. in Mechanical and Materials Engineering from Tatung University. Specializes in coating and phase change material process
-      design and development, materials mechanical property analysis and multiphysics simulation, and has experience in ROS robotics, electric vehicle battery data analysis, and AWS cloud platform
-      development. Aims to become an internationally-minded engineer with cross-disciplinary capabilities.
+      M.S. in Biomedical Engineering from National Taiwan University and B.S. in Mechanical and Materials Engineering from Tatung University. Specializes in Coating & Phase-Change material process
+      design and development, material & mechanical properties analysis and multi-physics engineering simulation, and has experience in ROS robotics, electric vehicle battery data analysis, and AWS
+      cloud platform development. Aims to become an internationally-minded engineer with cross-disciplinary capabilities.
   links:
     - label: LinkedIn
       url: ''
@@ -43,25 +43,27 @@ experience:
     points:
       zh:
         - 骨科植入物壓電塗層製程開發與整合
-        - 以 ANSYS 與 COMSOL 進行壓電–結構耦合模擬，支援微型超音波裝置的設計
+        - 運用 COMSOL 與 ANSYS 工程模擬 微型超音波手術裝置設計與開發
       en:
         - The Development and Integration of piezoelectric coatings for orthopedic implants
-        - Ran coupled piezoelectric–structural simulations in ANSYS and COMSOL to support the design of a miniature ultrasonic device.
+        - Ran engineering simulations in ANSYS and COMSOL to support the design and the development of a miniature ultrasonic surgery device.
   - org:
       zh: Amazon Web Services（AWS）
       en: Amazon Web Services (AWS)
     role:
       zh: 第六屆 AWS Educate 雲端大使 技術組
-      en: AWS Educate Cloud Ambassador, Tech Team (6th Cohort)
+      en: AWS Educate Cloud Ambassador, Tech Team (6th)
     period: 2024/03 – 2024/11
     place:
       zh: 台北
       en: Taipei
     points:
       zh:
-        - 設計並主講 5 場以上雲端實作工作坊，觸及 500 位以上學生。
+        - 跨團隊以及跨部門協作 設計證照培訓計畫與技術工作坊
+        - 設計並主講 5 場以上雲端實作工作坊，觸及 500 位以上學生
       en:
-        - Designed and delivered 5+ hands-on cloud workshops reaching 500+ students.
+        - Cross-team and cross-departmental collaboration in designing certification training programs and technical workshops
+        - Designed and delivered 5+ hands-on cloud workshops reaching 500+ students
   - org:
       zh: 中華汽車（CMC）
       en: China Motor Corporation (CMC)
@@ -74,9 +76,9 @@ experience:
       en: Taoyuan
     points:
       zh:
-        - 以 Python 分析車載 IoT 電動車電池數據，提出以內阻推估電池健康度（SOH）的方法。
+        - 以 Python 分析車載 IoT 電動車電池數據，並用於預測電池健康度（SOH）
       en:
-        - Analyzed electric-vehicle battery data from in-vehicle IoT devices with Python and proposed an internal-resistance-based state-of-health (SOH) approach.
+        - Using Python to analyze battery data from in-vehicle IoT electric vehicles and predict battery health (SOH).
 education:
   - org:
       zh: 國立臺灣大學
@@ -149,8 +151,8 @@ publications:
 projects:
   - slug: batio3-coating
     title:
-      zh: 水熱合成壓電 BaTiO3 塗層
-      en: Hydrothermal Piezoelectric BaTiO3 Coating
+      zh: 促進骨癒合之水熱合成壓電BaTiO3塗層技術開發
+      en: Development of Hydrothermal Piezoelectric BaTiO3 Coating Technology for Promoting Bone Healing
     period: 2024 – 2026
     role:
       zh: 碩士論文
@@ -159,17 +161,21 @@ projects:
       - Materials
       - Process
     featured: true
-    cover: ''
+    cover: assets/projects/batio3-coating/file-1794922002809.png
     summary:
       zh: 在 Ti-6Al-4V 骨科植入物表面原位成長壓電 BaTiO3 塗層，並建立製程、微結構與壓電性能的關聯。
       en: In-situ growth of a piezoelectric BaTiO3 coating on Ti-6Al-4V orthopedic implants, linking process, microstructure, and piezoelectric response.
     cv_points:
       zh:
-        - 以陽極處理、水熱合成、真空退火與電暈極化，原位成長約 1 µm 的 BaTiO3 塗層。
-        - 600 °C 退火使局部 d33 由 66.95 提升至 98.65 pm/V；800 °C 以上出現基材氧化與塗層剝落。
+        - 以陽極處理、水熱合成、真空退火與電暈極化，在Ti-6Al-4V上原位成長約 1 µm 的 BaTiO3 塗層
+        - 運用 SEM/EDX、XRD、Raman及PFM，多方面探討材料之特性，建立製程與材料性質表現之關聯
+        - 調控製程參數並優化，成功將壓電特性顯著提升67% ；同時確認800 °C 以上出現基材氧化與塗層剝落的失效模式
       en:
-        - Grew an approximately 1 µm BaTiO3 coating in situ through anodization, hydrothermal synthesis, vacuum annealing, and corona poling.
-        - Annealing at 600 °C raised local d33 from 66.95 to 98.65 pm/V; substrate oxidation and delamination appeared at 800 °C and above.
+        - Grew an approximately 1 µm BaTiO3 coating in situ on Ti-6Al-4V through anodization, hydrothermal synthesis, vacuum annealing, and corona poling.
+        - Using SEM/EDX, XRD, Raman, and PFM, exploring the material properties from multiple perspectives, establishing the correlation between process and material performance.
+        - >-
+          By adjusting and optimizing process parameters, successfully improved the piezoelectric properties by 67%. Simultaneously, we confirmed that substrate oxidation and coating peeling failure
+          modes occur above 800 °C.
     blocks:
       - t: h
         zh: 研究背景

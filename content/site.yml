@@ -10,8 +10,8 @@ profile:
     zh: 張家誌
     en: George Chang
   headline:
-    zh: 材料與製程開發工程｜工程模擬｜機器人系統整合
-    en: Materials & Process Development Engineering | Engineering Simulation | Robotics Integration
+    zh: 材料與製程開發工程｜工程模擬｜機器人系統整合 | 薄膜鍍膜技術
+    en: Materials & Process Development Engineering | Engineering Simulation | Robotics Integration| Thin Films Coating Technology
   location:
     zh: 台北，台灣
     en: Taipei, Taiwan
@@ -21,10 +21,11 @@ profile:
     zh: ''
     en: ''
   summary:
-    zh: 台灣大學醫學工程碩士。專長為塗層製程開發、材料分析與多物理模擬，並有 ROS 機器人開發經驗。目標是成為能在國際團隊中貢獻的跨領域工程師。
+    zh: 台灣大學醫學工程碩士，大同大學機械與材料工程學士。專長為塗層與相變材料製程設計開發、材料機械性質分析與多物理模擬，並具備 ROS 機器人、電動車電池數據分析、AWS雲端平台開發經驗。旨在成為具備跨領域能力的國際工程師。
     en: >-
-      M.S. in Biomedical Engineering (National Taiwan University) and B.S. in Mechanical and Materials Engineering. I work on coating process development, materials characterization, and multiphysics
-      simulation, with additional experience in ROS robotics. My goal is to contribute as a cross-disciplinary engineer in international teams.
+      M.S. in Biomedical Engineering from National Taiwan University and B.S. in Mechanical and Materials Engineering from Tatung University. Specializes in coating and phase change material process
+      design and development, materials mechanical property analysis and multiphysics simulation, and has experience in ROS robotics, electric vehicle battery data analysis, and AWS cloud platform
+      development. Aims to become an internationally-minded engineer with cross-disciplinary capabilities.
   links:
     - label: LinkedIn
       url: ''
@@ -90,15 +91,17 @@ education:
     points:
       zh:
         - 碩士論文：促進骨癒合之水熱合成壓電 BaTiO3 塗層技術開發
+        - 開發專案：壓電骨癒合骨科植入物、SONYVA微型超音波手術系統
       en:
         - 'Thesis: Development of Hydrothermal Piezoelectric BaTiO3 Coating Technology for Promoting Bone Healing'
+        - 'Development projects: Piezoelectric bone healing orthopedic implants, SONYVA miniature ultrasound surgical system'
   - org:
       zh: 大同大學
       en: Tatung University
     role:
       zh: 機械與材料工程學系 學士
       en: B.S. in Mechanical and Materials Engineering
-    period: 2020/09 – 2024/06
+    period: 2020/09 – 2024/07
     place:
       zh: 台北
       en: Taipei

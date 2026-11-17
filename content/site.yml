@@ -161,7 +161,7 @@ projects:
       - Materials
       - Process
     featured: true
-    cover: assets/projects/batio3-coating/file-1794922002809.png
+    cover: assets/projects/batio3-coating/XRD_RAMAN.png
     summary:
       zh: 在 Ti-6Al-4V 骨科植入物表面原位成長壓電 BaTiO3 塗層，並建立製程、微結構與壓電性能的關聯。
       en: In-situ growth of a piezoelectric BaTiO3 coating on Ti-6Al-4V orthopedic implants, linking process, microstructure, and piezoelectric response.

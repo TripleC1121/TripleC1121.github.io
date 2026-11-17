@@ -199,6 +199,12 @@ projects:
           - Compared the precursor thicknesses, Ba(OH)2 and KOH concentrations, annealing temperatures (400–1000 °C), and poling modes
           - Characterized morphology, composition, and phase with SEM/EDX, XRD, and Raman; local piezoelectric response measured by PFM
           - Built the corona-poling setup
+      - t: image
+        files:
+          - file-1794922433125.png
+        caption:
+          zh: ''
+          en: ''
       - t: h
         zh: 研究成果
         en: Results

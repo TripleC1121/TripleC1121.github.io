@@ -35,13 +35,13 @@ experience:
     role:
       zh: 生醫與醫材研究所 研發實習生
       en: R&D Intern, Biomedical Technology and Device Research Laboratories
-    period: 2025/09 – 待補
+    period: 2025/09 – 2026/07
     place:
       zh: 新竹
       en: Hsinchu
     points:
       zh:
-        - 參與骨科植入物壓電塗層的製程開發與整合。
+        - 骨科植入物壓電塗層的製程開發與整合。
         - 以 ANSYS 與 COMSOL 進行壓電–結構耦合模擬，支援微型超音波裝置的設計。
       en:
         - Contributed to process development and integration of piezoelectric coatings for orthopedic implants.
@@ -65,8 +65,8 @@ experience:
       zh: 中華汽車（CMC）
       en: China Motor Corporation (CMC)
     role:
-      zh: 前瞻技術室 實習生
-      en: Intern, Advanced Technology Office
+      zh: 前瞻技術室 軟體工程實習生
+      en: Software Engineering Intern, Advanced Technology Office
     period: 2022/07 – 2022/09
     place:
       zh: 桃園
@@ -456,6 +456,9 @@ projects:
       - t: p
         zh: 起始時間、帳號連結、成果數據。
         en: Start date, account links, and results.
+    cv_points:
+      zh: []
+      en: []
 awards:
   - title:
       zh: 國科會大專學生研究計畫

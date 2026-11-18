@@ -193,12 +193,12 @@ projects:
           - 建立四站整合製程：陽極處理形成 TiO2 前驅層 → 水熱合成 → 真空退火 → 電暈極化
           - 比較前驅層厚度、不同 Ba(OH)2 與 KOH 濃度、退火溫度（400–1000 °C）與 極化方式
           - 以 SEM/EDX、XRD、Raman 分析形貌、成分與晶相，以 PFM 量測局部壓電響應
-          - 自行架設電暈極化設備
+          - 電暈極化設備架設與開發
         en: |-
           - Built a four-step process: anodization to form a TiO2 precursor layer → hydrothermal synthesis → vacuum annealing → polarization
           - Compared the precursor thicknesses, Ba(OH)2 and KOH concentrations, annealing temperatures (400–1000 °C), and poling modes
           - Characterized morphology, composition, and phase with SEM/EDX, XRD, and Raman; local piezoelectric response measured by PFM
-          - Built the corona-poling setup
+          - Built and developed the corona-poling device
       - t: image
         files:
           - file-1794922433125.png
@@ -219,8 +219,8 @@ projects:
     cover_fit: cover
   - slug: pvdf-nanofiber
     title:
-      zh: 壓電 PVDF 奈米纖維膜促進骨生長
-      en: Piezoelectric PVDF Nanofiber Films for Bone Growth
+      zh: 增進骨生長之壓電PVDF奈米纖維薄膜開發與應用
+      en: Development and Application of Piezoelectric PVDF Nanofiber Films for Enhancing Bone Growth
     period: 2024 – 2026
     role:
       zh: 碩士級研究助理, NTU Spark / 第一作者, ORS Conference 2026
@@ -235,11 +235,13 @@ projects:
       en: Electrospun piezoelectric nanofiber films as an orthopedic implant coating, evaluated in cell and animal studies.
     cv_points:
       zh:
-        - 以靜電紡絲、退火與極化製備 PVDF/BaTiO3 薄膜：β 相 43–48%、d33 為 56–60 pC/N。
-        - 體外鈣沉積提升 1.5–2 倍；體內破壞載重 150 對 120 N（p = 0.045）。
+        - 以靜電紡絲、退火與極化製備 PVDF 薄膜，有效轉化PVDF β相並提升其壓電特性
+        - 透過In vivo and In vitro study 驗證壓電促進骨癒合之成效；體外鈣沉積提升 1.5–2 倍，體內骨頭強度提升20-30%
       en:
-        - 'Fabricated PVDF/BaTiO3 films by electrospinning, annealing, and poling: β-phase 43–48%, d33 56–60 pC/N.'
-        - In vitro calcium deposition up 1.5–2×; in vivo failure load 150 vs. 120 N (p = 0.045).
+        - PVDF films were prepared by electrospinning, annealing, and polarization, effectively converting the PVDF β phase and enhancing its piezoelectric properties.
+        - >-
+          The effectiveness of piezoelectricity in promoting bone healing was verified through in vivo and in vitro studies; in vitro calcium deposition was increased by 1.5–2 times, and in vivo bone
+          strength was increased by 20–30%.
     blocks:
       - t: h
         zh: 研究背景
@@ -262,21 +264,12 @@ projects:
       - t: h
         zh: 研究成果
         en: Results
-      - t: p
-        zh: |-
-          - 纖維直徑 90–200 nm，β 相比例 43–48%，d33 為 56–60 pC/N，拉伸強度約 25 MPa
-          - 體外：21 天鈣沉積提升 1.5–2 倍
-          - 體內：60 天後三點彎曲最大破壞載重，PVDF 塗層組 150 ± 20 N，未塗層對照組 120 ± 15 N（p = 0.045）
-        en: |-
-          - Fiber diameter 90–200 nm, β-phase 43–48%, d33 56–60 pC/N, tensile strength about 25 MPa
-          - In vitro: 1.5–2× calcium deposition at 21 days
-          - In vivo: maximum failure load at 60 days was 150 ± 20 N for PVDF-coated pins versus 120 ± 15 N for uncoated controls (p = 0.045)
-      - t: h
-        zh: 研究限制
-        en: Limitations
-      - t: p
-        zh: 動物實驗樣本數少，仍需更大規模的驗證。成果已被 ORS 2026 年會接受。
-        en: The animal sample size was small and larger studies are needed. Accepted at the ORS 2026 Annual Meeting.
+      - t: image
+        files:
+          - 1.png
+        caption:
+          zh: ''
+          en: ''
   - slug: ultrasonic-platform
     title:
       zh: 微型超音波手術平台（SONYVA）

@@ -181,10 +181,10 @@ projects:
         zh: 研究背景
         en: Background
       - t: p
-        zh: 骨頭本身具有壓電特性，受力時會產生電訊號並促進骨修復。這個研究想讓金屬植入物表面也具備同樣的能力。常見的 BaTiO3 鍍膜方法需要 800 °C 以上的高溫，但 Ti-6Al-4V 在高溫下會氧化，導致塗層剝落。
+        zh: 骨組織本身具有壓電特性，當骨骼受到力學刺激時可產生局部電位變化，進而活化細胞訊號傳遞並促進骨修復。基於此，本研究旨在於Ti-6Al-4V骨科植入物表面製備具壓電特性之BaTiO3（BTO）塗層，藉由材料本身之壓電效應，建立有利於骨癒合之電生理微環境。
         en: >-
-          Bone is piezoelectric: mechanical loading produces electrical signals that promote repair. This work aims to give metal implants the same ability. Common BaTiO3 coating methods need
-          temperatures above 800 °C, but Ti-6Al-4V oxidizes at high temperature and the coating delaminates.
+          Bone exhibits intrinsic piezoelectricity, and mechanical loading can generate localized electrical potentials that promote cellular signaling and bone repair. Based on this concept, this
+          study aimed to fabricate a piezoelectric BaTiO3 (BTO) coating on Ti-6Al-4V orthopedic implants in order to create a bioelectrical microenvironment favorable for bone healing. 
       - t: h
         zh: 研究方法
         en: Approach
@@ -221,8 +221,8 @@ projects:
       en: Piezoelectric PVDF Nanofiber Films for Bone Growth
     period: 2024 – 2026
     role:
-      zh: ORS 2026 第一作者
-      en: First author, ORS 2026
+      zh: 碩士級研究助理, NTU Spark / 第一作者, ORS Conference 2026
+      en: Master-degree research assistant, NTU Spark / First author, ORS Conference 2026
     tags:
       - Materials
       - Biomedical

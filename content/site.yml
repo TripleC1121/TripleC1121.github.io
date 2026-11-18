@@ -231,11 +231,13 @@ projects:
     featured: true
     cover: ''
     summary:
-      zh: 與臨床醫師合作開發的微創軟組織切割研究原型，目前為臨床前階段，尚未取得任何法規核准。
-      en: A research prototype for minimally invasive soft-tissue cutting, developed with clinicians. Preclinical stage; not cleared or approved by any regulatory agency.
+      zh: 運用COMSOL與ANSYS模擬壓電-結構模態之最佳參數與構型，並和多位臨床醫師合作，開發應用於精準切除微小軟組織的微型超音波手術平台。
+      en: >-
+        Using COMSOL and ANSYS to simulate the optimal parameters and configuration of piezoelectric-structural modes, and in collaboration with several clinicians, we developed a miniature ultrasound
+        surgical platform for the precise removal of tiny soft tissues.
     cv_points:
       zh:
-        - 參與模擬導向設計、原型製作、量測與離體組織切割實驗。
+        - 模擬方式設計與實際量測，共振頻率與
       en:
         - Contributed to simulation-driven design, prototyping, measurement, and ex vivo tissue-cutting tests.
     blocks:

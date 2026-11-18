@@ -267,6 +267,7 @@ projects:
       - t: image
         files:
           - 1.png
+          - 2.png
         caption:
           zh: ''
           en: ''

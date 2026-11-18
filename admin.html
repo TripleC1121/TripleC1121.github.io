@@ -26,7 +26,7 @@ textarea{min-height:84px;resize:vertical}textarea.tall{min-height:260px;font-fam
 .itemhead{display:flex;align-items:center;gap:8px;cursor:pointer}.itemhead b{flex:1}
 .media{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:12px}
 .m{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fafbfc}
-.m .th{height:120px;background:#e9eef4 center/cover no-repeat;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);word-break:break-all;padding:8px;text-align:center}
+.m .th{height:130px;background:#e9eef4 center/contain no-repeat;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);word-break:break-all;padding:8px;text-align:center}
 .m .in{padding:8px 10px}.m input{font-size:13px;padding:6px 8px;margin-bottom:5px}.m .row{display:flex;gap:5px;flex-wrap:wrap}
 .m.cover{border:2px solid var(--accent)}
 .drop{border:2px dashed #b9c6d6;border-radius:10px;padding:22px;text-align:center;color:var(--muted);background:#f8fafc;cursor:pointer}
@@ -36,12 +36,22 @@ textarea{min-height:84px;resize:vertical}textarea.tall{min-height:260px;font-fam
 .blk .bar{display:flex;align-items:center;gap:6px;margin-bottom:8px}.blk .ty{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted)}.blk.t-h input{font-weight:700;font-size:16px}
 .ins{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:6px 4px;opacity:.35;transition:opacity .15s;font-size:13px;color:var(--muted)}.ins:hover{opacity:1}
 .grip{cursor:grab;font-size:18px;color:#8a97a6;padding:0 6px;user-select:none}.grip:active{cursor:grabbing}.blk.dropto{outline:2px dashed var(--accent);outline-offset:3px}
+.m .fname{font-size:12px;color:var(--muted);word-break:break-all;margin-bottom:6px}
+.layout{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}.ctl{flex:1;min-width:180px}.ctl label b{color:var(--ink)}.ctl input[type=range]{width:100%}
+.minilabel{font-size:12px;color:var(--muted);margin:12px 0 4px}
+.mini{border:1px dashed #b9c6d6;border-radius:8px;padding:10px;background:#fff}
+.mfig .row{display:flex;gap:6px;align-items:flex-start}.mfig.pics .cell{flex:1 1 0;min-width:0}.mfig img{display:block;width:100%;height:auto;border-radius:6px}
+.mfig.crop .row{display:grid;gap:6px}.mfig.crop.c2 .row{grid-template-columns:1fr 1fr}.mfig.crop.c3 .row{grid-template-columns:repeat(3,1fr)}
+.pvrow{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start;margin:6px 0 10px}
+.pv-card{width:240px;aspect-ratio:340/220;border-radius:10px}
+.pv-hero{min-width:260px;aspect-ratio:1280/360;border-radius:10px;position:relative}.pv-hero span{position:absolute;left:10px;bottom:8px;color:#fff;font-size:12px;background:rgba(11,27,51,.6);padding:2px 8px;border-radius:999px}
 ol.steps{padding-left:20px;margin:6px 0}code{background:#eef2f6;padding:1px 6px;border-radius:4px}
 </style>
 </head>
 <body>
 <header><b>網站管理後台</b><span id="status"></span><span class="sp"></span>
   <a class="btn w s" href="./" target="_blank">開啟網站</a>
+  <button class="btn w s" id="preview" hidden title="開新視窗即時預覽尚未儲存的修改">即時預覽</button>
   <button class="btn" id="save" hidden>儲存並發布</button>
   <button class="btn w s" id="logout" hidden>登出</button>
 </header>

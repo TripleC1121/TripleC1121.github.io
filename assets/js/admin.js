@@ -99,7 +99,7 @@
   }
   function picker(label, accept, multiple, handler) {
     var input = el('input', { type: 'file', accept: accept || false, multiple: !!multiple, hidden: true });
-    function run(files) { if (!files.length || busy) return; busy = true; status('上傳中…（請勿關閉頁面）'); Promise.resolve(handler(Array.prototype.slice.call(files))).then(function () { busy = false; status('已上傳並發布，約 1 分鐘後網站更新', 'ok'); render(); }).catch(function (e) { busy = false; status('上傳失敗：' + e.message, 'bad'); }); }
+    function run(files) { if (!files.length || busy) return; busy = true; status('上傳中…（請勿關閉頁面）'); Promise.resolve(handler(Array.prototype.slice.call(files))).then(function () { busy = false; render(); }).catch(function (e) { busy = false; status('上傳失敗：' + e.message, 'bad'); }); }
     input.onchange = function () { run(input.files); };
     var d = el('div', { class: 'drop', text: label + '（點擊選擇，或把檔案拖到這裡）', onclick: function () { input.click(); } });
     d.ondragover = function (e) { e.preventDefault(); d.className = 'drop over'; }; d.ondragleave = function () { d.className = 'drop'; };
@@ -114,12 +114,59 @@
     });
     return el('div', { class: 'box' }, [el('h3', { text: '介面文字' }), el('p', { class: 'hint', text: '網站上所有固定的標題、選單與按鈕文字。左欄中文、右欄英文。留空就使用灰色字顯示的預設值。' })].concat(rows));
   }
+  function num(v, d, lo, hi) { v = parseFloat(v); return isNaN(v) ? d : Math.max(lo, Math.min(hi, v)); }
+  function slider(o, k, label, min, max, step, dflt, unit, onch) {
+    var out = el('b', { text: num(o[k], dflt, min, max) + unit });
+    var r = el('input', { type: 'range', min: min, max: max, step: step, value: num(o[k], dflt, min, max) });
+    r.oninput = function () { o[k] = +this.value; out.textContent = this.value + unit; if (onch) onch(); pushPreview(); };
+    return el('div', { class: 'ctl' }, [el('label', {}, [label + '：', out]), r]);
+  }
+  function select(o, k, label, opts, dflt, onch) {
+    var s = el('select', {}, opts.map(function (x) { return el('option', { value: x[0], text: x[1], selected: (o[k] || dflt) === x[0] }); }));
+    s.onchange = function () { o[k] = this.value; if (onch) onch(); pushPreview(); };
+    return el('div', { class: 'ctl' }, [el('label', { text: label }), s]);
+  }
+  function boxStyle(b) { var w = num(b.width, 100, 10, 100), al = b.align || 'center'; return 'width:' + w + '%;margin-left:' + (al === 'left' ? '0' : 'auto') + ';margin-right:' + (al === 'right' ? '0' : 'auto'); }
+  function miniImage(dir, b) {
+    var ratio = b.ratio && b.ratio !== 'auto' ? b.ratio : '';
+    var imgs = (b.files || []).map(function (f) {
+      var u = raw(dir + f);
+      return ratio ? '<img src="' + u + '" style="aspect-ratio:' + ratio + ';object-fit:cover;width:100%">' :
+        '<div class="cell"><img src="' + u + '" onload="if(this.naturalHeight)this.parentNode.style.flex=(this.naturalWidth/this.naturalHeight)+\' 1 0\'"></div>';
+    }).join('');
+    return '<div class="mfig ' + (ratio ? 'crop c' + Math.min((b.files || []).length, 3) : 'pics') + '" style="' + boxStyle(b) + '"><div class="row">' + imgs + '</div></div>';
+  }
+  function coverStyle(p) {
+    if (!p.cover) return 'background:linear-gradient(135deg,#0b1b33,#1f4f7a)';
+    return 'background-image:url("' + raw(p.cover) + '");background-size:' + (p.cover_fit === 'contain' ? 'contain' : 'cover') + ';background-position:' + num(p.cover_x, 50, 0, 100) + '% ' + num(p.cover_y, 50, 0, 100) + '%;background-repeat:no-repeat;background-color:#0b1b33';
+  }
   var dragFrom = null;
   var TYPES = [['h', '標題'], ['p', '文字'], ['image', '圖片'], ['video', '影片'], ['file', '檔案'], ['callout', '提醒框'], ['divider', '分隔線']];
   function typeName(t) { return (TYPES.filter(function (x) { return x[0] === t; })[0] || [0, t])[1]; }
+  var RESIZE = false; try { RESIZE = localStorage.getItem('resize2400') === '1'; } catch (e) {}
+  function resizeToggle() {
+    return el('label', { class: 'chk' }, [el('input', { type: 'checkbox', checked: RESIZE, onchange: function () { RESIZE = this.checked; try { localStorage.setItem('resize2400', RESIZE ? '1' : '0'); } catch (e) {} } }),
+      '上傳前把寬度超過 2400 px 的圖片等比例縮小到 2400 px（不裁切；PNG 維持無損。可大幅加快網頁載入，建議開啟）']);
+  }
+  function prepare(f) {
+    if (!RESIZE || !/^image\/(png|jpeg|webp)$/.test(f.type)) return fileB64(f).then(function (b) { return { name: safeName(f.name), b64: b }; });
+    return new Promise(function (res, rej) {
+      var url = URL.createObjectURL(f), img = new Image();
+      img.onload = function () {
+        URL.revokeObjectURL(url);
+        if (img.naturalWidth <= 2400) return fileB64(f).then(function (b) { res({ name: safeName(f.name), b64: b }); }, rej);
+        var c = document.createElement('canvas'); c.width = 2400; c.height = Math.round(img.naturalHeight * 2400 / img.naturalWidth);
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        var type = f.type === 'image/png' ? 'image/png' : 'image/jpeg';
+        res({ name: safeName(f.name), b64: c.toDataURL(type, 0.92).split(',')[1] });
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); fileB64(f).then(function (b) { res({ name: safeName(f.name), b64: b }); }, rej); };
+      img.src = url;
+    });
+  }
   function upload(p, files, each) {
     var dir = 'assets/projects/' + p.slug + '/', chain = Promise.resolve();
-    files.forEach(function (f) { chain = chain.then(function () { if (f.size > 50 * 1024 * 1024) throw new Error(f.name + ' 超過 50 MB，請壓縮或改貼 YouTube 連結'); var name = safeName(f.name); status('上傳 ' + name + '…'); return fileB64(f).then(function (b) { return put(dir + name, b, 'Upload ' + name); }).then(function () { each(name); }); }); });
+    files.forEach(function (f) { chain = chain.then(function () { if (f.size > 50 * 1024 * 1024) throw new Error(f.name + ' 超過 50 MB，請壓縮或改貼 YouTube 連結'); status('處理 ' + f.name + '…'); return prepare(f).then(function (x) { status('上傳 ' + x.name + '…'); return put(dir + x.name, x.b64, 'Upload ' + x.name).then(function () { each(x.name); }); }); }); });
     return chain.then(saveAll);
   }
   function blockEditor(p) {
@@ -143,16 +190,27 @@
       else if (b.t === 'image') {
         b.files = b.files || []; b.caption = bi(b.caption);
         body.push(el('div', { class: 'media' }, b.files.map(function (f, k) { var path = dir + f, isCover = p.cover === path;
-          return el('div', { class: 'm' + (isCover ? ' cover' : '') }, [el('div', { class: 'th', style: 'background-image:url(' + raw(path) + ')' }), el('div', { class: 'in' }, [el('div', { class: 'row' }, [
+          return el('div', { class: 'm' + (isCover ? ' cover' : '') }, [el('div', { class: 'th', style: 'background-image:url(' + raw(path) + ')', title: f }), el('div', { class: 'in' }, [el('div', { class: 'fname', text: f }), el('div', { class: 'row' }, [
+            el('button', { class: 'btn w s', text: '←', title: '左移', onclick: function () { if (k > 0) { b.files.splice(k - 1, 0, b.files.splice(k, 1)[0]); render(); } } }),
+            el('button', { class: 'btn w s', text: '→', title: '右移', onclick: function () { if (k < b.files.length - 1) { b.files.splice(k + 1, 0, b.files.splice(k, 1)[0]); render(); } } }),
             el('button', { class: 'btn ' + (isCover ? '' : 'w ') + 's', text: isCover ? '✓ 封面' : '設為封面', onclick: function () { p.cover = isCover ? '' : path; render(); } }),
             el('button', { class: 'btn d s', text: '移除', onclick: function () { b.files.splice(k, 1); if (p.cover === path) p.cover = ''; render(); } })])])]); })));
         body.push(picker('加入圖片（可一次多張，多張會並排）', 'image/*', true, function (files) { return upload(p, files, function (n) { b.files.push(n); }); }));
         body.push(bitext(b, 'caption', '圖說（選填）'));
+        if (b.files.length) {
+          var mp = el('div', { class: 'mini' }), upd = function () { mp.innerHTML = miniImage(dir, b); };
+          body.push(el('div', { class: 'layout' }, [
+            slider(b, 'width', '顯示寬度', 20, 100, 5, 100, '%', upd),
+            select(b, 'align', '對齊', [['center', '置中'], ['left', '靠左'], ['right', '靠右']], 'center', upd),
+            select(b, 'ratio', '比例', [['auto', '原比例（不裁切）'], ['16/9', '16:9（裁切）'], ['4/3', '4:3（裁切）'], ['1/1', '1:1（裁切）']], 'auto', upd)]));
+          body.push(el('div', { class: 'minilabel', text: '版面預覽（灰框＝專案頁內文寬度）' })); body.push(mp); upd();
+        }
       } else if (b.t === 'video') {
         b.caption = bi(b.caption);
         body.push(el('p', { class: 'hint', text: b.file ? '已上傳：' + b.file : '上傳 mp4（建議 25 MB 以下），或在下方貼 YouTube 連結，二擇一。' }));
         body.push(picker(b.file ? '更換影片檔' : '上傳影片檔', 'video/*', false, function (files) { return upload(p, files, function (n) { b.file = n; b.url = ''; }); }));
         body.push(text(b, 'url', 'YouTube 連結', 'https://youtu.be/...')); body.push(bitext(b, 'caption', '說明（選填）'));
+        body.push(el('div', { class: 'layout' }, [slider(b, 'width', '顯示寬度', 20, 100, 5, 100, '%'), select(b, 'align', '對齊', [['center', '置中'], ['left', '靠左'], ['right', '靠右']], 'center')]));
       } else if (b.t === 'file') {
         b.label = bi(b.label);
         body.push(el('p', { class: 'hint', text: b.file ? '已上傳：' + b.file : '上傳 PDF、簡報或其他文件，網站上會顯示為下載連結。' }));
@@ -174,6 +232,19 @@
     });
     return wrap;
   }
+  function coverEditor(p) {
+    var card = el('div', { class: 'pv-card' }), hero = el('div', { class: 'pv-hero' }, [el('span', { text: '專案頁頂部' })]);
+    function upd() { card.setAttribute('style', coverStyle(p)); hero.setAttribute('style', p.cover_hero === false ? 'background:linear-gradient(135deg,#0b1b33,#132a4d)' : coverStyle(p)); xy.hidden = p.cover_fit === 'contain' || !p.cover; }
+    var xy = el('div', { class: 'layout' }, [slider(p, 'cover_x', '水平位置', 0, 100, 1, 50, '%', upd), slider(p, 'cover_y', '垂直位置', 0, 100, 1, 50, '%', upd)]);
+    var box = el('div', {}, [
+      p.cover ? el('div', { class: 'layout' }, [select(p, 'cover_fit', '顯示方式', [['cover', '填滿（超出部分裁切，可調位置）'], ['contain', '完整顯示（不裁切，留白補深藍）']], 'cover', upd),
+        el('div', { class: 'ctl' }, [el('label', { text: '專案頁頂部背景' }), (function () { var sl = el('select', {}, [el('option', { value: '1', text: '使用封面圖', selected: p.cover_hero !== false }), el('option', { value: '0', text: '不使用（深藍純色，適合含文字的封面）', selected: p.cover_hero === false })]); sl.onchange = function () { if (this.value === '0') p.cover_hero = false; else delete p.cover_hero; upd(); pushPreview(); }; return sl; })()]),
+        el('div', { class: 'ctl' }, [el('label', { text: '原始圖片' }), el('a', { href: raw(p.cover), target: '_blank', text: '開新分頁查看原圖' })])]) : null,
+      p.cover ? xy : null,
+      el('div', { class: 'pvrow' }, [el('div', {}, [el('div', { class: 'minilabel', text: '卡片（首頁與專案列表）' }), card]), el('div', { style: 'flex:1' }, [el('div', { class: 'minilabel', text: '專案頁頂部' }), hero])])
+    ]);
+    upd(); return box;
+  }
   function projectForm(p) {
     var tagsIn = el('input', { type: 'text', value: (p.tags || []).join(', '), oninput: function () { p.tags = this.value.split(',').map(function (s) { return s.trim(); }).filter(Boolean); } });
     return [
@@ -182,8 +253,9 @@
       bitext(p, 'role', '角色／類型'), bitext(p, 'summary', '一句話摘要（顯示在卡片與專案頁上方）', true),
       check(p, 'featured', '顯示在首頁精選', false), check(p, 'in_cv', '列入履歷頁', true), lines(p, 'cv_points', '履歷頁條列'),
       el('h3', { text: '封面', style: 'margin:18px 0 0' }), el('p', { class: 'hint', text: '目前：' + (p.cover ? p.cover.split('/').pop() : '未設定（網站顯示自動色塊）') + '。可在這裡上傳，或在下方任一張圖片按「設為封面」。' }),
-      p.cover ? el('img', { src: raw(p.cover), style: 'height:120px;border-radius:8px;display:block;margin-bottom:8px' }) : null,
+      coverEditor(p),
       picker('上傳封面圖', 'image/*', false, function (files) { return upload(p, files, function (n) { p.cover = 'assets/projects/' + p.slug + '/' + n; }); }),
+      resizeToggle(),
       el('h3', { text: '頁面內容', style: 'margin:22px 0 0' }), el('p', { class: 'hint', text: '由上到下就是專案頁的呈現順序。用「＋ 插入」在任何位置加入標題、文字、圖片、影片、檔案；用 ↑ ↓ 調整順序。' }),
       blockEditor(p)
     ];
@@ -202,6 +274,47 @@
     return wrap;
   }
 
+  /* ---------- live preview ---------- */
+  var pv = null, pvTimer = null, lastRoute = null;
+  function currentRoute() {
+    if (tab === 'exp') return '#/experience';
+    if (tab === 'awards') return '#/awards';
+    if (tab === 'projects') { for (var i = 0; i < (S.projects || []).length; i++) if (open['pj' + i]) return '#/projects/' + S.projects[i].slug; return '#/projects'; }
+    return '#/';
+  }
+  function pushPreview(force) {
+    if (!pv || pv.closed || !S) return;
+    clearTimeout(pvTimer);
+    pvTimer = setTimeout(function () {
+      var r = currentRoute(), msg = { type: 'preview', S: JSON.parse(JSON.stringify(S)) };
+      if (force || r !== lastRoute) { msg.route = r; lastRoute = r; }
+      try { pv.postMessage(msg, location.origin); } catch (e) {}
+    }, force ? 0 : 250);
+  }
+  window.addEventListener('message', function (e) { if (e.origin === location.origin && e.data && e.data.type === 'preview-ready') pushPreview(true); });
+  main.addEventListener('input', function () { pushPreview(); });
+  main.addEventListener('change', function () { pushPreview(); });
+  document.getElementById('preview').onclick = function () {
+    lastRoute = null;
+    if (pv && !pv.closed) { pv.focus(); pushPreview(true); return; }
+    pv = window.open('index.html?preview=1' + currentRoute(), 'site-preview');
+  };
+  /* After saving, check the public site until the new content is live. */
+  var liveCheck = 0;
+  function waitLive(yml) {
+    var my = ++liveCheck, tries = 0, t0 = Date.now();
+    if (!/github\.io$/.test(location.hostname)) return;
+    (function poll() {
+      if (my !== liveCheck) return;
+      fetch('content/site.yml?v=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.text() : ''; }).then(function (txt) {
+        if (my !== liveCheck) return;
+        if (txt === yml) { status('✓ 網站已更新（' + new Date().toLocaleTimeString() + '，部署約 ' + Math.round((Date.now() - t0) / 1000) + ' 秒）', 'ok'); return; }
+        if (++tries > 40) { status('已儲存；網站仍在部署中，請稍後重新整理（可到 GitHub 儲存庫的 Actions 分頁查看進度）', 'ok'); return; }
+        status('已儲存，網站部署中…（' + Math.round((Date.now() - t0) / 1000) + ' 秒，通常 30–90 秒）'); setTimeout(poll, 5000);
+      }).catch(function () { if (my === liveCheck && ++tries <= 40) setTimeout(poll, 5000); });
+    })();
+  }
+
   /* ---------- load / save ---------- */
   function saveAll() {
     S.site = S.site || {}; S.site.github = { user: CFG.user, repo: CFG.repo, branch: CFG.branch };
@@ -209,10 +322,11 @@
     var yml = '# 此檔由管理後台（admin.html）產生與維護\n' + jsyaml.dump(S, { lineWidth: 200, noRefs: true });
     var chain = put('content/site.yml', b64enc(yml), 'Update site content');
     Object.keys(dirtyBody).forEach(function (slug) { chain = chain.then(function () { var b = bodies[slug]; return put('content/projects/' + slug + '.md', b64enc(b.zh.trim() + '\n\n<!--en-->\n\n' + b.en.trim() + '\n'), 'Update ' + slug); }).then(function () { delete dirtyBody[slug]; }); });
-    return chain.then(function () { status('已儲存並發布，約 1 分鐘後網站更新（' + new Date().toLocaleTimeString() + '）', 'ok'); });
+    return chain.then(function () { status('已儲存，網站部署中…'); waitLive(yml); });
   }
   function render() {
-    document.getElementById('save').hidden = document.getElementById('logout').hidden = !S;
+    document.getElementById('save').hidden = document.getElementById('logout').hidden = document.getElementById('preview').hidden = !S;
+    pushPreview();
     main.innerHTML = '';
     if (!S) return main.appendChild(login());
     var tabs = [['profile', '基本資料'], ['exp', '學歷與工作經歷'], ['projects', '專案成果'], ['awards', '獎項與發表'], ['labels', '介面文字']];

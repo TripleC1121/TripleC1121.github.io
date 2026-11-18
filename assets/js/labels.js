@@ -67,6 +67,12 @@ window.SITE_LABELS = [
   "en": "Education"
  },
  {
+  "k": "kSkills",
+  "d": "技能上方小字",
+  "zh": "Skills",
+  "en": "Skills"
+ },
+ {
   "k": "skills",
   "d": "技能標題",
   "zh": "技能",
@@ -101,24 +107,6 @@ window.SITE_LABELS = [
   "d": "專案內頁：返回連結",
   "zh": "← 返回專案列表",
   "en": "← Back to projects"
- },
- {
-  "k": "period",
-  "d": "專案內頁：期間",
-  "zh": "期間",
-  "en": "Period"
- },
- {
-  "k": "role",
-  "d": "專案內頁：角色",
-  "zh": "角色",
-  "en": "Role"
- },
- {
-  "k": "tags",
-  "d": "專案內頁：領域",
-  "zh": "領域",
-  "en": "Areas"
  },
  {
   "k": "awardsSub",

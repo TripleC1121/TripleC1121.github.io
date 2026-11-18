@@ -160,7 +160,7 @@ projects:
     tags:
       - Materials
       - Process
-    featured: true
+    featured: false
     cover: assets/projects/batio3-coating/file-1794922190722.png
     summary:
       zh: 在 Ti-6Al-4V 骨科植入物表面原位成長壓電 BaTiO3 塗層，並建立製程、微結構與壓電性能的關聯。
@@ -215,6 +215,8 @@ projects:
         caption:
           zh: ''
           en: ''
+    cover_hero: false
+    cover_fit: cover
   - slug: pvdf-nanofiber
     title:
       zh: 壓電 PVDF 奈米纖維膜促進骨生長

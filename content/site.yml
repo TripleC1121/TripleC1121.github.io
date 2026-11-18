@@ -268,6 +268,11 @@ projects:
         files:
           - 2.png
           - 1.png
+        caption:
+          zh: ''
+          en: ''
+      - t: image
+        files:
           - 3.png
         caption:
           zh: ''

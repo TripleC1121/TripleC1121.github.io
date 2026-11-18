@@ -217,14 +217,69 @@ projects:
           en: ''
     cover_hero: false
     cover_fit: cover
+  - slug: ultrasonic-platform
+    title:
+      zh: 微型超音波手術平台（SONYVA）
+      en: Miniature Ultrasonic Surgical Platform (SONYVA)
+    period: 2024 – 2026
+    role:
+      zh: 碩士級研究助理(計畫主執行人), NTU Spark
+      en: Master-degree research assistant(Key Person), NTU Spark
+    tags:
+      - Simulation
+      - Biomedical
+    featured: true
+    cover: ''
+    summary:
+      zh: 與臨床醫師合作開發的微創軟組織切割研究原型，目前為臨床前階段，尚未取得任何法規核准。
+      en: A research prototype for minimally invasive soft-tissue cutting, developed with clinicians. Preclinical stage; not cleared or approved by any regulatory agency.
+    cv_points:
+      zh:
+        - 參與模擬導向設計、原型製作、量測與離體組織切割實驗。
+      en:
+        - Contributed to simulation-driven design, prototyping, measurement, and ex vivo tissue-cutting tests.
+    blocks:
+      - t: callout
+        zh: 本頁內容待本人審核後才公開。此專案為臨床前研究原型，尚未取得任何法規核准，也未經臨床驗證。
+        en: This page is pending review before publication. The project is a preclinical research prototype. It is not cleared or approved by any regulatory agency and has not been clinically validated.
+      - t: h
+        zh: 專案概述
+        en: Overview
+      - t: p
+        zh: SONYVA 是學生團隊，與台大醫院耳鼻喉科及眼科醫師合作，開發用於微創軟組織切割的微型超音波手術平台。
+        en: SONYVA is a student team working with otolaryngologists and ophthalmologists at NTU Hospital on a miniature ultrasonic surgical platform for minimally invasive soft-tissue cutting.
+      - t: h
+        zh: 產品特色
+        en: Features
+      - t: p
+        zh: 待補：由本人提供可公開的特色與功能說明。
+        en: 'To be added: publicly shareable features and functions.'
+      - t: h
+        zh: 負責項目
+        en: Responsibilities
+      - t: p
+        zh: |-
+          - 工程模擬與設計評估
+          - 原型製作與量測
+          - 離體組織切割實驗
+        en: |-
+          - Engineering simulation and design evaluation
+          - Prototyping and measurement
+          - Ex vivo tissue-cutting tests
+      - t: h
+        zh: 影片與照片
+        en: Media
+      - t: p
+        zh: 待補：由本人提供可公開的影片與照片。
+        en: To be added.
   - slug: pvdf-nanofiber
     title:
       zh: 增進骨生長之壓電PVDF奈米纖維薄膜開發與應用
       en: Development and Application of Piezoelectric PVDF Nanofiber Films for Enhancing Bone Growth
     period: 2024 – 2026
     role:
-      zh: 碩士級研究助理, NTU Spark / 第一作者, ORS Conference 2026
-      en: Master-degree research assistant, NTU Spark / First author, ORS Conference 2026
+      zh: 碩士級研究助理(計畫主執行人), NTU Spark / 第一作者, ORS Conference 2026
+      en: Master-degree research assistant(Key Person), NTU Spark / First author, ORS Conference 2026
     tags:
       - Materials
       - Biomedical
@@ -277,61 +332,6 @@ projects:
         caption:
           zh: ''
           en: ''
-  - slug: ultrasonic-platform
-    title:
-      zh: 微型超音波手術平台（SONYVA）
-      en: Miniature Ultrasonic Surgical Platform (SONYVA)
-    period: 2024 – 2026
-    role:
-      zh: 學生團隊主要成員，NTU SPARK 計畫
-      en: Key member, student team, NTU SPARK program
-    tags:
-      - Simulation
-      - Biomedical
-    featured: true
-    cover: ''
-    summary:
-      zh: 與臨床醫師合作開發的微創軟組織切割研究原型，目前為臨床前階段，尚未取得任何法規核准。
-      en: A research prototype for minimally invasive soft-tissue cutting, developed with clinicians. Preclinical stage; not cleared or approved by any regulatory agency.
-    cv_points:
-      zh:
-        - 參與模擬導向設計、原型製作、量測與離體組織切割實驗。
-      en:
-        - Contributed to simulation-driven design, prototyping, measurement, and ex vivo tissue-cutting tests.
-    blocks:
-      - t: callout
-        zh: 本頁內容待本人審核後才公開。此專案為臨床前研究原型，尚未取得任何法規核准，也未經臨床驗證。
-        en: This page is pending review before publication. The project is a preclinical research prototype. It is not cleared or approved by any regulatory agency and has not been clinically validated.
-      - t: h
-        zh: 專案概述
-        en: Overview
-      - t: p
-        zh: SONYVA 是學生團隊，與台大醫院耳鼻喉科及眼科醫師合作，開發用於微創軟組織切割的微型超音波手術平台。
-        en: SONYVA is a student team working with otolaryngologists and ophthalmologists at NTU Hospital on a miniature ultrasonic surgical platform for minimally invasive soft-tissue cutting.
-      - t: h
-        zh: 產品特色
-        en: Features
-      - t: p
-        zh: 待補：由本人提供可公開的特色與功能說明。
-        en: 'To be added: publicly shareable features and functions.'
-      - t: h
-        zh: 負責項目
-        en: Responsibilities
-      - t: p
-        zh: |-
-          - 工程模擬與設計評估
-          - 原型製作與量測
-          - 離體組織切割實驗
-        en: |-
-          - Engineering simulation and design evaluation
-          - Prototyping and measurement
-          - Ex vivo tissue-cutting tests
-      - t: h
-        zh: 影片與照片
-        en: Media
-      - t: p
-        zh: 待補：由本人提供可公開的影片與照片。
-        en: To be added.
   - slug: wdlc-corrosion
     title:
       zh: W-DLC 薄膜之腐蝕行為

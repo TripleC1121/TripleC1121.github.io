@@ -160,7 +160,7 @@ projects:
     tags:
       - Materials
       - Process
-    featured: false
+    featured: true
     cover: assets/projects/batio3-coating/file-1794922190722.png
     summary:
       zh: 在 Ti-6Al-4V 骨科植入物表面原位成長壓電 BaTiO3 塗層，並建立製程、微結構與壓電性能的關聯。
